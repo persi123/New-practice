@@ -12,16 +12,16 @@ def maximin(D,start,end):
                 e=D[k]
                 k+=1
     print("maximum:",e)     
-    for x in range(start,end):
+    for x in range(start,end):      
         if x<1:
             if D[0]<D[1]:
                 e=D[0]
             else:
                 e=D[1]
         else:
-            if e>D[k]:
-                e=D[k]
-                k+=1
-    print("minimum:",e)                       
+          if k<end and e>D[k]:
+            e=D[k]
+          k+=1
+    print("minimum:",e)                         
 
 maximin([10,2,5,9,8],0,4)
